@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t Udacity-monolith-to-microservices-project .
-  - docker tag Udacity-monolith-to-microservices-project YOUR_DOCKER_HUB/Udacity-monolith-to-microservices-project:latest
+  - docker build -t udacity-monolith-to-microservices-project .
+  - docker tag udacity-monolith-to-microservices-project YOUR_DOCKER_HUB/udacity-monolith-to-microservices-project:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push YOUR_DOCKER_HUB/Udacity-monolith-to-microservices-project
+  - docker push YOUR_DOCKER_HUB/udacity-monolith-to-microservices-project
