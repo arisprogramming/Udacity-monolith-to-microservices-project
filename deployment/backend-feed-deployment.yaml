@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-feed
+spec:
+  selector:
+    matchLabels:
+      app: backend-feed
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backend-feed
+    spec:
+      containers:
+      - name: backend-feed
+        image: aristido/udagram-api-feed:v4
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 400m
+            memory: 2000Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi

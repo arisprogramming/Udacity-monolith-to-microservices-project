@@ -188,3 +188,6 @@ docker-compose up
 4. Visit http://localhost:8100 in your web browser to verify that the application is running. 
 
 
+npm install -D@types/express-static-
+ASIARSAMI2S33GT75QGP
+AmazonEKSNodeRole
